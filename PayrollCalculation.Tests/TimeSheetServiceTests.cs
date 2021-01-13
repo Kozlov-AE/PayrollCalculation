@@ -11,10 +11,17 @@ namespace PayrollCalculation.Tests
         public void TrackTime_ShouldReturnTrue()
         {
             //arrange
+            var timeLog = new TimeLog()
+            {
+                Date = new DateTime(),
+                WorkingHours = 1,
+                LastName = "",
+            };
+
             var service = new TimeSheetService();
 
             //act
-            var result = service.TrackTime();
+            var result = service.TrackTime(timeLog);
 
             //assert
             Assert.IsTrue(result);

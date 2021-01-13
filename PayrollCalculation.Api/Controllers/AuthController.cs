@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PayrollCalculation.Api.Models;
-using PayrollCalculation.Api.Models.ResourceModels;
+using PayrollCalculation.Api.ResourceModels;
 using PayrollCalculation.Api.Services;
 
 namespace PayrollCalculation.Api.Controllers

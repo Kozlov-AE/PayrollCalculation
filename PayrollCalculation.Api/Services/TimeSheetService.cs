@@ -11,7 +11,15 @@ namespace PayrollCalculation.Api.Services
     {
         public bool TrackTime(TimeLog timeLog)
         {
+            bool isValid = timeLog.WorkingHours > 0
+                           && timeLog.WorkingHours <= 24;
+
+            if (!isValid)
+            {
+                return false;
+            }
             TimeSheets.TimeLogs.Add(timeLog);
+            
             return true;
         }
     }
